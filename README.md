@@ -10,14 +10,18 @@ Rpg Maker MV (base on Steam software)
 # member
 ## tower
 + **nickname**:tower
-+ **role**:master-game-designer and coder
++ **role**:master Game Designer & Coder
 + **time-added**:18/7/15
 
 ## speoth
 + **nickname**:speoth
-+ **role**:master-coder 
++ **role**:master Coder 
 + **time-added**:18/7/15
 
+## Czechia_
++ **nickname**:Czechia_
++ **role**:executive Designer
++ **time-added**:18/7/15
 
 # Other
 * This project ignores matters (includes audio/ movie/ img/ fonts/ ... )

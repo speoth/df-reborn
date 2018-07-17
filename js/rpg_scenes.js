@@ -2508,6 +2508,7 @@ Scene_Battle.prototype.commandItem = function() {
 };
 
 Scene_Battle.prototype.selectNextCommand = function() {
+    console.log('????')
     BattleManager.selectNextCommand();
     this.changeInputWindow();
 };

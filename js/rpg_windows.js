@@ -5558,7 +5558,7 @@ Window_BattleActor.prototype.initialize = function(x, y) {
 };
 
 Window_BattleActor.prototype.show = function() {
-    this.select(0);
+    this.select(1);
     Window_BattleStatus.prototype.show.call(this);
 };
 

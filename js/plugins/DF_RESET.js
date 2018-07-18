@@ -9,7 +9,7 @@
             //this.addAttackCommand();
             this.addSkillCommands();
             // this.addGuardCommand();停用防守
-            // this.addItemCommand();停用道具
+            // this.addItemCommand();
         }
     }
 

@@ -2295,7 +2295,7 @@ Window_EquipStatus.prototype.setTempActor = function(tempActor) {
 };
 
 Window_EquipStatus.prototype.drawItem = function(x, y, paramId) {
-    this.drawParamName(x + this.textPadding(), y, paramId);
+    this.drawParamName(x + this.textPadding() , y, paramId);
     if (this._actor) {
         this.drawCurrentParam(x + 140, y, paramId);
     }
@@ -2307,7 +2307,7 @@ Window_EquipStatus.prototype.drawItem = function(x, y, paramId) {
 
 Window_EquipStatus.prototype.drawParamName = function(x, y, paramId) {
     this.changeTextColor(this.systemColor());
-    this.drawText(TextManager.param(paramId), x, y, 120);
+    this.drawText(TextManager.param(paramId) , x, y, 120);
 };
 
 Window_EquipStatus.prototype.drawCurrentParam = function(x, y, paramId) {
@@ -2477,6 +2477,9 @@ Window_EquipItem.prototype.includes = function(item) {
     if (item === null) {
         return true;
     }
+
+    console.log(this._actor,this._actor.equipSlots())
+
     if (this._slotId < 0 || item.etypeId !== this._actor.equipSlots()[this._slotId]) {
         return false;
     }

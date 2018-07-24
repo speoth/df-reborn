@@ -3627,8 +3627,8 @@ Game_Actor.prototype.isEquipChangeOk = function(slotId) {
 };
 
 Game_Actor.prototype.changeEquip = function(slotId, item) {
-    if (this.tradeItemWithParty(item, this.equips()[slotId]) &&
-            (!item || this.equipSlots()[slotId] === item.etypeId)) {
+    
+    if (this.tradeItemWithParty(item, this.equips()[slotId])) {
         this._equips[slotId].setObject(item);
         this.refresh();
     }
@@ -3752,7 +3752,7 @@ Game_Actor.prototype.isWtypeEquipped = function(wtypeId) {
 };
 
 Game_Actor.prototype.refresh = function() {
-    this.releaseUnequippableItems(false);
+    // this.releaseUnequippableItems(false);
     Game_Battler.prototype.refresh.call(this);
 };
 

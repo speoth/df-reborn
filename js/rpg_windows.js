@@ -2324,7 +2324,7 @@ Window_EquipStatus.prototype.drawNewParam = function(x, y, paramId) {
     var newValue = this._tempActor.param(paramId);
     var diffvalue = newValue - this._actor.param(paramId);
     this.changeTextColor(this.paramchangeTextColor(diffvalue));
-    this.drawText(newValue, x, y, 48, 'right');
+    this.drawText(newValue+'嘤嘤嘤', x, y, 48, 'right');
 };
 
 //-----------------------------------------------------------------------------
@@ -2478,7 +2478,6 @@ Window_EquipItem.prototype.includes = function(item) {
         return true;
     }
 
-    console.log(this._actor,this._actor.equipSlots())
 
     if (this._slotId < 0 || item.etypeId !== this._actor.equipSlots()[this._slotId]) {
         return false;
@@ -2499,6 +2498,7 @@ Window_EquipItem.prototype.setStatusWindow = function(statusWindow) {
 };
 
 Window_EquipItem.prototype.updateHelp = function() {
+    window.actor = this._actor;
     Window_ItemList.prototype.updateHelp.call(this);
     if (this._actor && this._statusWindow) {
         var actor = JsonEx.makeDeepCopy(this._actor);

@@ -3,8 +3,6 @@
 var $plugins =
 [
 {"name":"Community_Basic","status":true,"description":"Plugin used to set basic parameters.","parameters":{"cacheLimit":"20","screenWidth":"816","screenHeight":"624","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off"}},
-{"name":"TWDP_BaseWindowEx","status":false,"description":"v1.00 Extend the show message window.","parameters":{"Use TWD Window Skin":"false","Default Window Skin":"","User Window Meta":"{}","Enable Window Stacking":"true"}},
-{"name":"TWDP_ShowMessageEx","status":false,"description":"v1.00 Extend the show message window.","parameters":{"---------- Parameters ----------":"","Auto Wrap":"false","---------- Skins ----------":"","Text Window Skin":"swd3_dialog_window","Text Window Skin For None Fuki":"-","Name Window Skin":"swd3_name_window","Name Window Skin For None Fuki":"-","Gold Window Skin":"","Choice Window Skin":"","Number Window Skin":"","Item Window Skin":"","---------- Metas ----------":"","Text Window Meta":"{}","Name Window Meta":"{}","Gold Window Meta":"{}","Choice Window Meta":"{}","Item Window Meta":"{}","Number Window Meta":"{}"}},
-{"name":"DF_RESET","status":false,"description":"","parameters":{}},
-{"name":"DF_BattleMenuCommandList","status":true,"description":"DF通用脚本 - 菜单屏蔽","parameters":{"isAttackDisable":"Disable","isDefendDisable":"Disable","isSkillsDisable":"","isItemsDisable":"Disable"}}
+{"name":"DF_BattleMenuCommandList","status":true,"description":"DF通用脚本 - 菜单屏蔽","parameters":{"isAttackDisable":"Disable","isDefendDisable":"Disable","isSkillsDisable":"","isItemsDisable":"Disable"}},
+{"name":"DF_ParallelEquipmentSlot","status":true,"description":"DF通用脚本 - 平行装备槽","parameters":{}}
 ];

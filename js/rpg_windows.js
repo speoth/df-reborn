@@ -1592,21 +1592,39 @@ Window_MenuCommand.prototype.makeCommandList = function() {
     this.addGameEndCommand();
 };
 
-Window_MenuCommand.prototype.addMainCommands = function() {
+Window_MenuCommand.prototype.addMainCommands = function () {
     var enabled = this.areMainCommandsEnabled();
+};
+
+Window_MenuCommand.prototype.addItemsCommands = function () {
     if (this.needsCommand('item')) {
+        var enabled = this.isItemsEnabled();
         this.addCommand(TextManager.item, 'item', enabled);
     }
+}
+
+Window_MenuCommand.prototype.addSkillsCommands = function () {
     if (this.needsCommand('skill')) {
+        var enabled = this.isSkillsEnabled();
         this.addCommand(TextManager.skill, 'skill', enabled);
     }
+}
+
+Window_MenuCommand.prototype.addEquipCommands = function () {
     if (this.needsCommand('equip')) {
+        var enabled = this.isEquipEnabled();
         this.addCommand(TextManager.equip, 'equip', enabled);
     }
+}
+
+Window_MenuCommand.prototype.addStatusCommands = function () {
     if (this.needsCommand('status')) {
+        var enabled = this.isStatusEnabled();
         this.addCommand(TextManager.status, 'status', enabled);
     }
-};
+}
+
+
 
 Window_MenuCommand.prototype.addFormationCommand = function() {
     if (this.needsCommand('formation')) {
@@ -1660,6 +1678,22 @@ Window_MenuCommand.prototype.needsCommand = function(name) {
 
 Window_MenuCommand.prototype.areMainCommandsEnabled = function() {
     return $gameParty.exists();
+};
+
+Window_MenuCommand.prototype.isItemsEnabled = function () {
+    return true;
+};
+
+Window_MenuCommand.prototype.isSkillsEnabled = function () {
+    return true;
+};
+
+Window_MenuCommand.prototype.isEquipEnabled = function () {
+    return true;
+};
+
+Window_MenuCommand.prototype.isStatusEnabled = function () {
+    return true;
 };
 
 Window_MenuCommand.prototype.isFormationEnabled = function() {

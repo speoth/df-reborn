@@ -3,6 +3,6 @@
 var $plugins =
 [
 {"name":"Community_Basic","status":true,"description":"Plugin used to set basic parameters.","parameters":{"cacheLimit":"20","screenWidth":"816","screenHeight":"624","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off"}},
-{"name":"DF_BattleMenuCommandList","status":true,"description":"DF通用脚本 - 菜单屏蔽","parameters":{"isAttackDisable":"Disable","isDefendDisable":"Disable","isSkillsDisable":"","isItemsDisable":"Disable"}},
-{"name":"DF_ParallelEquipmentSlot","status":true,"description":"DF通用脚本 - 平行装备槽","parameters":{}}
+{"name":"DF_ParallelEquipmentSlot","status":true,"description":"DF通用脚本 - 平行装备槽","parameters":{}},
+{"name":"DF_MenuCommandList","status":true,"description":"DF通用脚本 - 菜单屏蔽","parameters":{"BattleMenu_isAttackDisable":"Disable","BattleMenu_isDefendDisable":"Disable","BattleMenu_isSkillsDisable":"","BattleMenu_isItemsDisable":"Disable","MainMenu_isItemsDisable":"","MainMenu_isSkillsDisable":"","MainMenu_isEquipsDisable":"","MainMenu_isStatusDisable":"","MainMenu_isFormatDisable":"Disable","MainMenu_isOptionDisable":"","MainMenu_isSaveDisable":"","MainMenu_isEndDisable":""}}
 ];

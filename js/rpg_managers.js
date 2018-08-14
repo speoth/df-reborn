@@ -2466,7 +2466,8 @@ BattleManager.isForcedTurn = function () {
     return this._turnForced;
 };
 
-BattleManager.updateTurnEnd = function() {
+BattleManager.updateTurnEnd = function () {
+    alert('niubi');
     this.startInput();
 };
 

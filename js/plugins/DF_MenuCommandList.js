@@ -56,6 +56,27 @@
     * @param MainMenu_isEndDisable
     * @desc  是否禁用【结束】指令，如果值为“Disable”则在主菜单界面不显示【结束】指令，其余任何值都会使【物品】指令显示出来。
     * @default Disable
+    *
+    * ============================  物品菜单指令 ============================ *
+    *
+    * @param ItemMenu_isItemsDisable
+    * @desc  是否禁用【物品】指令，如果值为“Disable”则在主菜单界面不显示【物品】指令，其余任何值都会使【物品】指令显示出来。
+    * @default Disable
+    *
+    * @param ItemMenu_isWeaponsDisable
+    * @desc  是否禁用【武器】指令，如果值为“Disable”则在主菜单界面不显示【技能】指令，其余任何值都会使【物品】指令显示出来。
+    * @default Disable
+    *
+    * @param ItemMenu_isArmorsDisable
+    * @desc  是否禁用【防具】指令，如果值为“Disable”则在主菜单界面不显示【装备】指令，其余任何值都会使【物品】指令显示出来。
+    * @default Disable
+    *
+    * @param ItemMenu_iskeyItemDisable
+    * @desc  是否禁用【关键道具】指令，如果值为“Disable”则在主菜单界面不显示【状态】指令，其余任何值都会使【物品】指令显示出来。
+    * @default Disable
+    *
+    *
+    *
     * @help
     * ============================================================================
     * Introduction
@@ -75,8 +96,9 @@
 
     var MCL = MCL || {};
 
-    MCL.MainParams = MCL.BattleParams || {};
+    MCL.MainParams = MCL.MainParams || {};
     MCL.BattleParams = MCL.BattleParams || {};
+    MCL.ItemParams = MCL.ItemParams || {};
 
     MCL.parameters = PluginManager.parameters('DF_MenuCommandList');
 
@@ -95,6 +117,13 @@
     MCL.BattleParams.isShow_Defend = MCL.parameters['BattleMenu_isDefendDisable'];
     MCL.BattleParams.isShow_Skills = MCL.parameters['BattleMenu_isSkillsDisable'];
     MCL.BattleParams.isShow_Items  = MCL.parameters['BattleMenu_isItemsDisable' ];
+
+    //物品菜单 - 传参
+    MCL.ItemParams.isShow_Item_Item    = MCL.parameters['ItemMenu_isItemsDisable'  ];
+    MCL.ItemParams.isShow_Item_Weapons = MCL.parameters['ItemMenu_isWeaponsDisable'];
+    MCL.ItemParams.isShow_Item_Armors  = MCL.parameters['ItemMenu_isArmorsDisable' ];
+    MCL.ItemParams.isShow_Item_KeyItem = MCL.parameters['ItemMenu_iskeyItemDisable'];
+
 
     /*
     * 改写MenuCommand，判断制作主菜单的时候是否调用原有方法。
@@ -145,6 +174,35 @@
         //这是留给新功能的位置
         //this.addOriginalCommands();
     };
+
+    /*
+     * 修改ItemCategory，判断制作主菜单的时候是否调用原有方法。
+     */
+    Window_ItemCategory.prototype.makeCommandList = function() {
+
+        //禁用物品
+        if (MCL.ItemParams.isShow_Item_Item != 'Disable') {
+            this.addCommand(TextManager.item,    'item');
+        }
+
+        //禁用物品
+        if (MCL.ItemParams.isShow_Item_Weapons != 'Disable') {
+            this.addCommand(TextManager.weapon,  'weapon');
+        }
+
+        //禁用物品
+        if (MCL.ItemParams.isShow_Item_Armors != 'Disable') {
+            this.addCommand(TextManager.armor,   'armor');
+        }
+
+        //禁用物品
+        if (MCL.ItemParams.isShow_Item_KeyItem != 'Disable') {
+            this.addCommand(TextManager.keyItem, 'keyItem');
+        }
+
+    };
+
+
 
     /*
      * 修改ActorCommand，判断制作战斗命令菜单的时候是否调用原有方法。

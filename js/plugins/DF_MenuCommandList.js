@@ -60,6 +60,27 @@
     * @param MainMenu_isEndDisable
     * @desc  是否禁用【结束】指令，如果值为“Disable”则在主菜单界面不显示【结束】指令，其余任何值都会使【结束】指令显示出来。
     * @default Disable
+    * 
+    * 
+    *
+    * ============================  物品目录指令 ============================ *
+    *
+    * @param ItemCategory_isItemDisable
+    * @desc  是否禁用【物品】指令，如果值为“Disable”则在物品目录界面不显示【物品】指令，其余任何值都会使【物品】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isWeaponDisable
+    * @desc  是否禁用【武器】指令，如果值为“Disable”则在物品目录界面不显示【武器】指令，其余任何值都会使【武器】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isArmorDisable
+    * @desc  是否禁用【防具】指令，如果值为“Disable”则在物品目录界面不显示【防具】指令，其余任何值都会使【防具】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isKeyItemDisable
+    * @desc  是否禁用【关键道具】指令，如果值为“Disable”则在物品目录界面不显示【关键道具】指令，其余任何值都会使【关键道具】指令显示出来。
+    * @default Disable
+    * 
     * @help
     * ============================================================================
     * Introduction
@@ -96,6 +117,13 @@
     MCL.MainParams.isShow_End       = MCL.parameters['MainMenu_isEndDisable'        ];
     MCL.MainParams.isShow_Memory    = MCL.parameters['MainMenu_isMemoryDisable'     ];
 
+    //物品目录 - 传参
+    MCL.MainParams.isShow_Category_Item     = MCL.parameters['ItemCategory_isItemDisable'   ];
+    MCL.MainParams.isShow_Category_Weapon   = MCL.parameters['ItemCategory_isWeaponDisable' ];
+    MCL.MainParams.isShow_Category_Armor    = MCL.parameters['ItemCategory_isArmorDisable'  ];
+    MCL.MainParams.isShow_Category_KeyItem  = MCL.parameters['ItemCategory_isKeyItemDisable'];
+
+
     //战斗菜单 - 传参
     MCL.BattleParams.isShow_Attack  = MCL.parameters['BattleMenu_isAttackDisable'   ];
     MCL.BattleParams.isShow_Defend  = MCL.parameters['BattleMenu_isDefendDisable'   ];
@@ -127,6 +155,11 @@
             this.addStatusCommands();
         }
 
+        //禁用记忆
+        if (MCL.MainParams.isShow_Memory != 'Disable') {
+            this.addMemoryCommands();
+        }
+
         //禁用整队
         if (MCL.MainParams.isShow_Format != 'Disable') {
             this.addFormationCommand();
@@ -147,15 +180,35 @@
             this.addGameEndCommand();
         }
 
-        //禁用记忆
-        if (MCL.MainParams.isShow_Memory != 'Disable') {
-            this.addMemoryCommands();
-        }
-
     };
 
 
+    /*
+    * 改写ItemCategory，判断制作物品目录的时候是否调用原有方法。
+    */
+    Window_ItemCategory.prototype.makeCommandList = function () {
 
+        //禁用物品目录 - 物品
+        if (MCL.MainParams.isShow_Category_Item != 'Disable') {
+            this.addCommand(TextManager.item, 'item');
+        }
+
+        //禁用物品目录 - 武器
+        if (MCL.MainParams.isShow_Category_Weapon != 'Disable') {
+            this.addCommand(TextManager.weapon, 'weapon');
+        }
+
+        //禁用物品目录 - 防具
+        if (MCL.MainParams.isShow_Category_Armor != 'Disable') {
+            this.addCommand(TextManager.armor, 'armor');
+        }
+
+        //禁用物品目录 - 关键道具
+        if (MCL.MainParams.isShow_Category_KeyItem != 'Disable') {
+            this.addCommand(TextManager.keyItem, 'keyItem');
+        }
+
+    };
 
 
 

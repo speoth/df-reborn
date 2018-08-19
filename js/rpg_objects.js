@@ -8961,7 +8961,8 @@ Game_Interpreter.prototype.skipBranch = function() {
     }
 };
 
-Game_Interpreter.prototype.currentCommand = function() {
+Game_Interpreter.prototype.currentCommand = function () {
+    
     return this._list[this._index];
 };
 
@@ -9344,7 +9345,7 @@ Game_Interpreter.prototype.command113 = function() {
     while (this._index < this._list.length - 1) {
         this._index++;
         var command = this.currentCommand();
-
+        debugger;
         if (command.code === 112)
             depth++;
 

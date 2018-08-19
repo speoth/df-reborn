@@ -148,7 +148,7 @@
         }
 
         //禁用记忆
-        if (mcl.MainParams, isShow_Memory != 'Disable') {
+        if (MCL.MainParams.isShow_Memory != 'Disable') {
             this.addMemoryCommands();
         }
 

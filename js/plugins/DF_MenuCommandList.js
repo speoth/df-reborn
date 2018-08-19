@@ -3,7 +3,7 @@
     //=============================================================================
     /*:
     * @plugindesc DF通用脚本 - 菜单屏蔽
-    * @author 明火暗雷
+    * @author 明火暗雷、菌丝
     *
     * ============================  战斗菜单指令 ============================ *
     *
@@ -30,31 +30,35 @@
     * @default Disable
     *
     * @param MainMenu_isSkillsDisable
-    * @desc  是否禁用【技能】指令，如果值为“Disable”则在主菜单界面不显示【技能】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【技能】指令，如果值为“Disable”则在主菜单界面不显示【技能】指令，其余任何值都会使【技能】指令显示出来。
     * @default Disable
     *
     * @param MainMenu_isEquipsDisable
-    * @desc  是否禁用【装备】指令，如果值为“Disable”则在主菜单界面不显示【装备】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【装备】指令，如果值为“Disable”则在主菜单界面不显示【装备】指令，其余任何值都会使【装备】指令显示出来。
     * @default Disable
-    *
+    * 
+    * @param MainMenu_isMemoryDisable
+    * @desc  是否禁用【记忆】指令，如果值为“Disable”则在主菜单界面不显示【记忆】指令，其余任何值都会使【记忆】指令显示出来。
+    * @default Disable
+    * 
     * @param MainMenu_isStatusDisable
-    * @desc  是否禁用【状态】指令，如果值为“Disable”则在主菜单界面不显示【状态】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【状态】指令，如果值为“Disable”则在主菜单界面不显示【状态】指令，其余任何值都会使【状态】指令显示出来。
     * @default Disable
     *
     * @param MainMenu_isFormatDisable
-    * @desc  是否禁用【整队】指令，如果值为“Disable”则在主菜单界面不显示【整队】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【整队】指令，如果值为“Disable”则在主菜单界面不显示【整队】指令，其余任何值都会使【整队】指令显示出来。
     * @default Disable
     *
     * @param MainMenu_isOptionDisable
-    * @desc  是否禁用【选项】指令，如果值为“Disable”则在主菜单界面不显示【选项】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【选项】指令，如果值为“Disable”则在主菜单界面不显示【选项】指令，其余任何值都会使【选项】指令显示出来。
     * @default Disable
     *
     * @param MainMenu_isSaveDisable
-    * @desc  是否禁用【存档】指令，如果值为“Disable”则在主菜单界面不显示【存档】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【存档】指令，如果值为“Disable”则在主菜单界面不显示【存档】指令，其余任何值都会使【存档】指令显示出来。
     * @default Disable
     *
     * @param MainMenu_isEndDisable
-    * @desc  是否禁用【结束】指令，如果值为“Disable”则在主菜单界面不显示【结束】指令，其余任何值都会使【物品】指令显示出来。
+    * @desc  是否禁用【结束】指令，如果值为“Disable”则在主菜单界面不显示【结束】指令，其余任何值都会使【结束】指令显示出来。
     * @default Disable
     * @help
     * ============================================================================
@@ -78,23 +82,25 @@
     MCL.MainParams = MCL.BattleParams || {};
     MCL.BattleParams = MCL.BattleParams || {};
 
+    //找到插件脚本
     MCL.parameters = PluginManager.parameters('DF_MenuCommandList');
 
     //主菜单 - 传参
-    MCL.MainParams.isShow_Items  = MCL.parameters['MainMenu_isItemsDisable' ];
-    MCL.MainParams.isShow_Skills = MCL.parameters['MainMenu_isSkillsDisable'];
-    MCL.MainParams.isShow_Equips = MCL.parameters['MainMenu_isEquipsDisable'];
-    MCL.MainParams.isShow_Status = MCL.parameters['MainMenu_isStatusDisable'];
-    MCL.MainParams.isShow_Format = MCL.parameters['MainMenu_isFormatDisable'];
-    MCL.MainParams.isShow_Option = MCL.parameters['MainMenu_isOptionDisable'];
-    MCL.MainParams.isShow_Save   = MCL.parameters['MainMenu_isSaveDisable'  ];
-    MCL.MainParams.isShow_End    = MCL.parameters['MainMenu_isEndDisable'   ];
+    MCL.MainParams.isShow_Items     = MCL.parameters['MainMenu_isItemsDisable'      ];
+    MCL.MainParams.isShow_Skills    = MCL.parameters['MainMenu_isSkillsDisable'     ];
+    MCL.MainParams.isShow_Equips    = MCL.parameters['MainMenu_isEquipsDisable'     ];
+    MCL.MainParams.isShow_Status    = MCL.parameters['MainMenu_isStatusDisable'     ];
+    MCL.MainParams.isShow_Format    = MCL.parameters['MainMenu_isFormatDisable'     ];
+    MCL.MainParams.isShow_Option    = MCL.parameters['MainMenu_isOptionDisable'     ];
+    MCL.MainParams.isShow_Save      = MCL.parameters['MainMenu_isSaveDisable'       ];
+    MCL.MainParams.isShow_End       = MCL.parameters['MainMenu_isEndDisable'        ];
+    MCL.MainParams.isShow_Memory    = MCL.parameters['MainMenu_isMemoryDisable'     ];
 
     //战斗菜单 - 传参
-    MCL.BattleParams.isShow_Attack = MCL.parameters['BattleMenu_isAttackDisable'];
-    MCL.BattleParams.isShow_Defend = MCL.parameters['BattleMenu_isDefendDisable'];
-    MCL.BattleParams.isShow_Skills = MCL.parameters['BattleMenu_isSkillsDisable'];
-    MCL.BattleParams.isShow_Items  = MCL.parameters['BattleMenu_isItemsDisable' ];
+    MCL.BattleParams.isShow_Attack  = MCL.parameters['BattleMenu_isAttackDisable'   ];
+    MCL.BattleParams.isShow_Defend  = MCL.parameters['BattleMenu_isDefendDisable'   ];
+    MCL.BattleParams.isShow_Skills  = MCL.parameters['BattleMenu_isSkillsDisable'   ];
+    MCL.BattleParams.isShow_Items   = MCL.parameters['BattleMenu_isItemsDisable'    ];
 
     /*
     * 改写MenuCommand，判断制作主菜单的时候是否调用原有方法。
@@ -103,7 +109,7 @@
 
         //禁用物品
         if (MCL.MainParams.isShow_Items != 'Disable') {
-            this.addItemsCommands();
+			this.addItemsCommands();
         }
 
         //禁用技能
@@ -141,10 +147,18 @@
             this.addGameEndCommand();
         }
 
+        //禁用记忆
+        if (mcl.MainParams, isShow_Memory != 'Disable') {
+            this.addMemoryCommands();
+        }
 
-        //这是留给新功能的位置
-        //this.addOriginalCommands();
     };
+
+
+
+
+
+
 
     /*
      * 修改ActorCommand，判断制作战斗命令菜单的时候是否调用原有方法。
@@ -173,6 +187,42 @@
             }
         }
     }
+
+
+
+
+
+
+	/*
+	*===========================================================
+	*--------------------这里是新加按钮的代码---------------------
+	*===========================================================
+    * 新增按钮方法：
+    * step1 - 在data/system.json里，找到command，在最后添加要添加的按钮名称的字段
+    * step2 - 在js/rpg_manader里，找到Object.defineProperties，在command处按照格式加一个成员
+    * step3 - 按照下述方法，定义一个新的按钮
+    * step4 - 调用Window_MenuCommand.prototype新定义的方法即可使用
+	*/
+
+    /*
+	*=======================新增按钮：记忆========================
+	*/
+
+	Window_MenuCommand.prototype.addMemoryCommands = function () {
+        var enabled = this.isMemoryEnabled();
+        this.addCommand(TextManager.memory, 'memory', enabled);
+	}
+
+    //修改enable变量
+    Window_MenuCommand.prototype.isMemoryEnabled = function () {
+        return true;
+    };
+
+
+
+
+
+
 
 
 

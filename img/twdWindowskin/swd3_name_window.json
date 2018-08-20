@@ -1,0 +1,156 @@
+{
+  "frame": [{
+    "x": 0,
+    "y": 0,
+    "w": 8,
+    "h": 8,
+    "tx": 0,
+    "ty": 0,
+    "tw": 8,
+    "th": 8
+  }, {
+    "x": 8,
+    "y": 0,
+    "w": 8,
+    "h": 8,
+    "tx": 8,
+    "ty": 0,
+    "tw": "w-16",
+    "th": 8,
+    "fillType": "repeat"
+  }, {
+    "x": 16,
+    "y": 0,
+    "w": 8,
+    "h": 8,
+    "tx": "w-8",
+    "ty": 0,
+    "tw": 8,
+    "th": 8
+  }, {
+    "x": 0,
+    "y": 8,
+    "w": 8,
+    "h": 8,
+    "tx": 0,
+    "ty": 8,
+    "tw": 8,
+    "th": "h-16",
+    "fillType": "repeat"
+  }, {
+    "x": 16,
+    "y": 8,
+    "w": 8,
+    "h": 8,
+    "tx": "w-8",
+    "ty": 8,
+    "tw": 8,
+    "th": "h-16",
+    "fillType": "repeat"
+  }, {
+    "x": 0,
+    "y": 16,
+    "w": 8,
+    "h": 8,
+    "tx": 0,
+    "ty": "h-8",
+    "tw": 8,
+    "th": 8
+  }, {
+    "x": 8,
+    "y": 16,
+    "w": 8,
+    "h": 8,
+    "tx": 8,
+    "ty": "h-8",
+    "tw": "w-16",
+    "th": 8,
+    "fillType": "repeat"
+  }, {
+    "x": 16,
+    "y": 16,
+    "w": 8,
+    "h": 8,
+    "tx": "w-8",
+    "ty": "h-8",
+    "tw": 8,
+    "th": 8
+  }, {
+    "x": 24,
+    "y": 0,
+    "w": 64,
+    "h": 16,
+    "tx": 8,
+    "ty": 8,
+    "tw": "w-16",
+    "th": "h-16",
+    "fillType": "repeat"
+  }],
+  "back": [],
+  "cursor": {},
+  "upArrow": [],
+  "downArrow": [],
+  "selected": [],
+  "pauseSign": {},
+  "accessories": [{
+    "w": "w",
+    "h": "h",
+    "p": "down",
+    "bitmaps": [
+      [{
+        "x": 24,
+        "y": 16,
+        "w": 8,
+        "h": 8,
+        "tx": 0,
+        "ty": 0,
+        "tw": "w",
+        "th": "h"
+      }]
+    ],
+    "frames": [{
+      "x": 13,
+      "y": 4,
+      "a": 1,
+      "anchorX": 0,
+      "anchorY": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }]
+  }],
+  "meta": {
+    "fontSize": 22,
+    "padding": 2,
+    "fontColor": "#785028",
+    "lineHeight": 36,
+    "textOutline": false,
+    "textShadowed": true,
+    "shadowColor": "rgba(168,168,120,1)",
+    "shadowDistance": 1,
+    "fuki": {
+      "maxWidth": 480,
+      "maxWidthWithPortrait": 600,
+      "minWidth": 80,
+      "minWidthWithPortrait": 300,
+      "maxLines": 4,
+      "minLines": 1,
+      "minLinesWidthPortrait": 3,
+      "arrowHeight": 15,
+      "charaHeight": 50,
+      "charaSpace": 0
+    },
+    "portrait":{
+      "indent": 11,
+      "spacing": 15,
+      "distanceToBottom": 10
+    },
+    "asNameWindow":{
+      "offsetX": "newLineX-10",
+      "offsetY": 15,
+      "widthDelta":25,
+      "heightDelta":0
+    }
+  }
+}

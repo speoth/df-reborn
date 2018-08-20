@@ -1,0 +1,417 @@
+{
+  "frame": [{
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32,
+    "tx": 0,
+    "ty": 0,
+    "tw": 32,
+    "th": 32,
+    "a": 255
+  }, {
+    "x": 32,
+    "y": 0,
+    "w": 32,
+    "h": 32,
+    "tx": 32,
+    "ty": 0,
+    "tw": "w-64",
+    "th": 32,
+    "fillType": "repeat"
+  }, {
+    "x": 64,
+    "y": 0,
+    "w": 32,
+    "h": 32,
+    "tx": "w-32",
+    "ty": 0,
+    "tw": 32,
+    "th": 32
+  }, {
+    "x": 0,
+    "y": 32,
+    "w": 32,
+    "h": 32,
+    "tx": 0,
+    "ty": 32,
+    "tw": 32,
+    "th": "h-64",
+    "fillType": "repeat"
+  }, {
+    "x": 64,
+    "y": 32,
+    "w": 32,
+    "h": 32,
+    "tx": "w-32",
+    "ty": 32,
+    "tw": 32,
+    "th": "h-64",
+    "fillType": "repeat"
+  }, {
+    "x": 0,
+    "y": 64,
+    "w": 32,
+    "h": 32,
+    "tx": 0,
+    "ty": "h-32",
+    "tw": 32,
+    "th": 32
+  }, {
+    "x": 32,
+    "y": 64,
+    "w": 32,
+    "h": 32,
+    "tx": 32,
+    "ty": "h-32",
+    "tw": "w-64",
+    "th": 32,
+    "fillType": "repeat"
+  }, {
+    "x": 64,
+    "y": 64,
+    "w": 32,
+    "h": 32,
+    "tx": "w-32",
+    "ty": "h-32",
+    "tw": 32,
+    "th": 32
+  }, {
+    "x": 32,
+    "y": 32,
+    "w": 32,
+    "h": 32,
+    "tx": 32,
+    "ty": 32,
+    "tw": "w-64",
+    "th": "h-64",
+    "fillType": "repeat"
+  }],
+  "back": [],
+  "cursor": {
+    "bitmaps": [
+      [{
+        "x": 0,
+        "y": 96,
+        "w": 16,
+        "h": 16,
+        "tx": 0,
+        "ty": 0,
+        "tw": 16,
+        "th": 16
+      }, {
+        "x": 16,
+        "y": 96,
+        "w": 96,
+        "h": 4,
+        "tx": 16,
+        "ty": 0,
+        "tw": "w-32",
+        "th": 4,
+        "fillType": "repeat"
+      }, {
+        "x": 112,
+        "y": 96,
+        "w": 16,
+        "h": 16,
+        "tx": "w-16",
+        "ty": 0,
+        "tw": 16,
+        "th": 16
+      }, {
+        "x": 0,
+        "y": 112,
+        "w": 4,
+        "h": 48,
+        "tx": 0,
+        "ty": 16,
+        "tw": 4,
+        "th": "h-32",
+        "fillType": "repeat"
+      }, {
+        "x": 124,
+        "y": 112,
+        "w": 4,
+        "h": 48,
+        "tx": "w-4",
+        "ty": 16,
+        "tw": 4,
+        "th": "h-32",
+        "fillType": "repeat"
+      }, {
+        "x": 0,
+        "y": 160,
+        "w": 16,
+        "h": 16,
+        "tx": 0,
+        "ty": "h-16",
+        "tw": 16,
+        "th": 16
+      }, {
+        "x": 16,
+        "y": 172,
+        "w": 96,
+        "h": 4,
+        "tx": 16,
+        "ty": "h-4",
+        "tw": "w-32",
+        "th": 4,
+        "fillType": "repeat"
+      }, {
+        "x": 112,
+        "y": 160,
+        "w": 16,
+        "h": 16,
+        "tx": "w-16",
+        "ty": "h-16",
+        "tw": 16,
+        "th": 16
+      }]
+    ],
+    "frames": [{
+      "x": 0,
+      "y": 0,
+      "a": 1,
+      "anchorX": 0,
+      "anchorY": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }, {
+      "x": 0,
+      "y": 0,
+      "a": 0.5,
+      "anchorX": 0,
+      "anchorY": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }]
+  },
+  "upArrow": {
+    "w": 32,
+    "h": 24,
+    "bitmaps": [
+      [{
+        "x": 160,
+        "y": 32,
+        "w": 32,
+        "h": 24,
+        "tx": 0,
+        "ty": 0,
+        "tw": 32,
+        "th": 24
+      }]
+    ],
+    "frames": [{
+      "x": "w/2",
+      "y": "10",
+      "a": 1,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }, {
+      "x": "w/2",
+      "y": "5",
+      "a": 1,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }]
+  },
+  "downArrow": {
+    "w": 32,
+    "h": 24,
+    "bitmaps": [
+      [{
+        "x": 160,
+        "y": 0,
+        "w": 32,
+        "h": 24,
+        "tx": 0,
+        "ty": 0,
+        "tw": 32,
+        "th": 24
+      }]
+    ],
+    "frames": [{
+      "x": "w/2",
+      "y": "h-10",
+      "a": 1,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }, {
+      "x": "w/2",
+      "y": "h-5",
+      "a": 1,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }]
+  },
+  "selected": [],
+  "pauseSign": {
+    "w": 32,
+    "h": 32,
+    "bitmaps": [
+      [{
+        "x": 120,
+        "y": 0,
+        "w": 29,
+        "h": 32,
+        "tx": 0,
+        "ty": 0,
+        "tw": 32,
+        "th": 32
+      }],
+      [{
+        "x": 120,
+        "y": 32,
+        "w": 29,
+        "h": 32,
+        "tx": 0,
+        "ty": 0,
+        "tw": 32,
+        "th": 32
+      }]
+    ],
+    "frames": [{
+      "x": "w-25",
+      "y": "h-10",
+      "a": 1,
+      "anchorX": 0.5,
+      "anchorY": 1,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }, {
+      "x": "w-25",
+      "y": "h-10",
+      "anchorX": 0.5,
+      "anchorY": 1,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 1,
+      "frameCount": 20
+    }]
+  },
+  "accessories": [{
+    "w": 24,
+    "h": 65,
+    "p": "down",
+    "bitmaps": [
+      [{
+        "x": 96,
+        "y": 0,
+        "w": 24,
+        "h": 65,
+        "tx": 0,
+        "ty": 0,
+        "tw": 24,
+        "th": 65
+      }]
+    ],
+    "frames": [{
+      "x": "w-5",
+      "y": "(h/2)-10",
+      "a": 1,
+      "anchorX": 0,
+      "anchorY": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "bitmap": 0,
+      "frameCount": 20
+    }]
+  }],
+  "meta": {
+    "fontSize": 28,
+    "padding": 24,
+    "fontColor": "#785028",
+    "lineHeight": 36,
+    "textOutline": false,
+    "textShadowed": true,
+    "shadowColor": "rgba(168,168,120,1)",
+    "shadowDistance": 1,
+    "fuki": {
+      "maxWidth": 480,
+      "maxWidthWithPortrait": 600,
+      "minWidth": 80,
+      "minWidthWithPortrait": 300,
+      "maxLines": 4,
+      "minLines": 1,
+      "minLinesWidthPortrait": 3,
+      "arrowHeight": 0,
+      "charaHeight": 50,
+      "charaSpace": 10
+    },
+    "portrait":{
+      "indent": 11,
+      "spacing": 15,
+      "distanceToBottom": 10
+    },
+    "dimMeta":{
+      "fontSize": 28,
+      "padding": 18,
+      "fontColor": "0",
+      "lineHeight": 36,
+      "textOutlined": true,
+      "textShadowed": false,
+      "outlineColor": "rgba(0, 0, 0, 0.5)",
+      "shadowColor": "rgba(0,0,0,0.5)",
+      "shadowDistance": 1,
+      "paddingDetail": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0,
+        "withNameWindow": {
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "fuki": {
+        "maxWidth": 480,
+        "maxWidthWithPortrait": 600,
+        "minWidth": 80,
+        "minWidthWithPortrait": 200,
+        "maxLines": 4,
+        "minLines": 1,
+        "minLinesWidthPortrait": 3,
+        "arrowHeight": 0,
+        "charaHeight": 50,
+        "charaSpace": 15
+      },
+      "portrait": {
+        "indent": 20,
+        "spacing": 20,
+        "distanceToBottom": 10
+      },
+      "asNameWindow": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "widthDelta": 0,
+        "heightDelta": 0,
+        "openWhenDisplay": true,
+        "closeWhenDisappear": true
+      }
+    }
+  }
+}

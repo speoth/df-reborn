@@ -81,6 +81,24 @@
     * @desc  是否禁用【关键道具】指令，如果值为“Disable”则在物品目录界面不显示【关键道具】指令，其余任何值都会使【关键道具】指令显示出来。
     * @default Disable
     * 
+    * @param ItemCategory_isSensoryDisable
+    * @desc  是否禁用【感官】指令，如果值为“Disable”则在物品目录界面不显示【感官】指令，其余任何值都会使【感官】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isRecollectionDisable
+    * @desc  是否禁用【记忆】指令，如果值为“Disable”则在物品目录界面不显示【记忆】指令，其余任何值都会使【记忆】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isMindDisable
+    * @desc  是否禁用【思维】指令，如果值为“Disable”则在物品目录界面不显示【思维】指令，其余任何值都会使【思维】指令显示出来。
+    * @default Disable
+    * 
+    * @param ItemCategory_isNerveDisable
+    * @desc  是否禁用【神经】指令，如果值为“Disable”则在物品目录界面不显示【神经】指令，其余任何值都会使【神经】指令显示出来。
+    * @default Disable
+    * 
+    * 
+    * 
     * @help
     * ============================================================================
     * Introduction
@@ -118,11 +136,14 @@
     MCL.MainParams.isShow_Memory    = MCL.parameters['MainMenu_isMemoryDisable'     ];
 
     //物品目录 - 传参
-    MCL.MainParams.isShow_Category_Item     = MCL.parameters['ItemCategory_isItemDisable'   ];
-    MCL.MainParams.isShow_Category_Weapon   = MCL.parameters['ItemCategory_isWeaponDisable' ];
-    MCL.MainParams.isShow_Category_Armor    = MCL.parameters['ItemCategory_isArmorDisable'  ];
-    MCL.MainParams.isShow_Category_KeyItem  = MCL.parameters['ItemCategory_isKeyItemDisable'];
-
+    MCL.MainParams.isShow_Category_Item         = MCL.parameters['ItemCategory_isItemDisable'   ];
+    MCL.MainParams.isShow_Category_Weapon       = MCL.parameters['ItemCategory_isWeaponDisable' ];
+    MCL.MainParams.isShow_Category_Armor        = MCL.parameters['ItemCategory_isArmorDisable'  ];
+    MCL.MainParams.isShow_Category_KeyItem      = MCL.parameters['ItemCategory_isKeyItemDisable'];
+    MCL.MainParams.isShow_Category_Sensory      = MCL.parameters['ItemCategory_isSensoryDisable'];
+    MCL.MainParams.isShow_Category_Recollection = MCL.parameters['ItemCategory_isRecollectionDisable'];
+    MCL.MainParams.isShow_Category_Mind         = MCL.parameters['ItemCategory_isMindDisable'];
+    MCL.MainParams.isShow_Category_Nerve        = MCL.parameters['ItemCategory_isNerveDisable'];
 
     //战斗菜单 - 传参
     MCL.BattleParams.isShow_Attack  = MCL.parameters['BattleMenu_isAttackDisable'   ];
@@ -207,6 +228,27 @@
         if (MCL.MainParams.isShow_Category_KeyItem != 'Disable') {
             this.addCommand(TextManager.keyItem, 'keyItem');
         }
+
+        //禁用物品目录 - 感官
+        if (MCL.MainParams.isShow_Category_Sensory != 'Disable') {
+            this.addCommand(TextManager.sensory, 'sensory');
+        }
+
+        //禁用物品目录 - 记忆
+        if (MCL.MainParams.isShow_Category_Recollection != 'Disable') {
+            this.addCommand(TextManager.recollection, 'recollection');
+        }
+
+        //禁用物品目录 - 思维
+        if (MCL.MainParams.isShow_Category_Mind != 'Disable') {
+            this.addCommand(TextManager.mind, 'mind');
+        }
+
+        //禁用物品目录 - 神经
+        if (MCL.MainParams.isShow_Category_Nerve != 'Disable') {
+            this.addCommand(TextManager.nerve, 'nerve');
+        }
+        
 
     };
 

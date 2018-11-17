@@ -4,6 +4,6 @@ null,
 {"id":2,"expanded":true,"name":"MAP002","order":2,"parentId":0,"scrollX":1213.5,"scrollY":1396.5},
 {"id":3,"expanded":true,"name":"MAP003","order":3,"parentId":0,"scrollX":1225.5,"scrollY":681},
 {"id":4,"expanded":false,"name":"黑屏","order":6,"parentId":0,"scrollX":832,"scrollY":640},
-{"id":5,"expanded":false,"name":"MAP005","order":4,"parentId":0,"scrollX":1846,"scrollY":624},
+{"id":5,"expanded":false,"name":"MAP005","order":4,"parentId":0,"scrollX":1846.6666666666667,"scrollY":624},
 {"id":6,"expanded":false,"name":"MAP006","order":5,"parentId":0,"scrollX":1654.6666666666667,"scrollY":602.6666666666666}
 ]
